@@ -556,7 +556,7 @@ addEventListener('keydown',e=>{
 
 /* hero graph */
 const cv=$('#net'),ctx=cv.getContext('2d');
-const NAMES=['Inventory','Employees','Petty Cash','Payroll','Vacation','Tasks','Documents','Sales','Invoicing','Reporting'];
+const NAMES=['Inventory','Employees','Petty Cash','Payroll','Vacation','Tasks','Documents','Sales','Invoicing','Reporting','POS','Penalty','Salary'];
 let W=0,H=0,nodes=[],packets=[],mouse={x:-999,y:-999},colors={},colorsDirty=true,running=true,lastSpawn=0,hot=-1,hotUntil=0;
 function readColors(){const cs=getComputedStyle(root),g=n=>cs.getPropertyValue(n).trim();colors={accent:g('--accent'),fg:g('--fg'),muted:g('--muted'),signal:g('--signal'),surface:g('--surface'),afg:g('--accent-fg'),line:g('--line')};colorsDirty=false}
 function sizeNet(){const r=cv.getBoundingClientRect(),d=Math.min(devicePixelRatio||1,2);W=r.width;H=r.height;cv.width=Math.round(W*d);cv.height=Math.round(H*d);ctx.setTransform(d,0,0,d,0,0)}
